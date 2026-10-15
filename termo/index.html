@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Termo</h1>
+    <p id="mensagem" class="mensagem"></p>
+    <div id="grade" class="grade"></div>
+    <div id="teclado" class="teclado"></div>
+    <button id="reiniciar" class="botao" hidden>Jogar novamente</button>
+  </main>
+
+  <!--
+    Estrutura esperada (gerada pelo JS):
+
+    <div class="linha">
+      <div class="casa">a</div>
+      <div class="casa certa">b</div>
+      ...
+    </div>
+
+    <div class="linha-teclado">
+      <button class="tecla">q</button>
+      ...
+      <button class="tecla larga">enter</button>
+    </div>
+
+    Classes de estado: certa, lugar, errada (casas e teclas), preenchida (casa com letra),
+    tremer (linha).
+  -->
+
+  <script src="script.js"></script>
+  <script src="testes.js"></script>
+</body>
+</html>

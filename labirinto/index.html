@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labirinto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Labirinto</h1>
+
+    <div class="painel">
+      <select id="tamanho">
+        <option value="10">10 x 10</option>
+        <option value="20" selected>20 x 20</option>
+        <option value="30">30 x 30</option>
+      </select>
+      <button id="gerar">Gerar</button>
+      <button id="resolver">Resolver</button>
+      <span>Movimentos: <strong id="movimentos">0</strong></span>
+    </div>
+
+    <p id="mensagem" class="mensagem"></p>
+
+    <!--
+      Cada célula: <div class="celula p-cima p-direita p-baixo p-esquerda"></div>
+
+      Classes:
+        p-cima, p-direita, p-baixo, p-esquerda   paredes (remova a classe quando a parede não existir)
+        oculta      célula ainda não gerada (para a animação de geração)
+        atual       célula onde a geração está agora
+        jogador     posição do jogador
+        saida       célula de saída
+        explorada   visitada pela BFS
+        caminho     parte do caminho final
+    -->
+    <div id="labirinto" class="labirinto"></div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="testes.js"></script>
+</body>
+</html>

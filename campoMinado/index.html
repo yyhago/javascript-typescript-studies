@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campo Minado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Campo Minado</h1>
+
+    <div class="painel">
+      <select id="nivel">
+        <option value="facil">Fácil</option>
+        <option value="medio">Médio</option>
+        <option value="dificil">Difícil</option>
+      </select>
+      <span>Minas: <strong id="minas">0</strong></span>
+      <span>Tempo: <strong id="tempo">0</strong></span>
+      <button id="reiniciar">Reiniciar</button>
+    </div>
+
+    <p id="mensagem" class="mensagem"></p>
+
+    <!--
+      Cada célula: <button class="celula" data-linha="0" data-coluna="0"></button>
+
+      Classes:
+        revelada         célula aberta
+        n1 ... n8        cor do número (junto com revelada)
+        bandeira         célula marcada
+        mina             mina visível (no fim do jogo)
+        explodiu         a mina clicada
+        bandeira-errada  bandeira numa célula sem mina (no fim do jogo)
+      Adicione a classe "bloqueado" no #tabuleiro para impedir cliques no fim do jogo.
+    -->
+    <div id="tabuleiro" class="tabuleiro"></div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="testes.js"></script>
+</body>
+</html>

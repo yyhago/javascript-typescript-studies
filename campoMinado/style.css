@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #e5e7eb;
+  color: #111827;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.painel {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.painel select,
+.painel button {
+  padding: 6px 12px;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.mensagem {
+  min-height: 24px;
+  font-weight: 600;
+}
+
+/* A quantidade de colunas vem do JS: tabuleiro.style.gridTemplateColumns */
+.tabuleiro {
+  display: grid;
+  gap: 2px;
+  padding: 8px;
+  background: #9ca3af;
+  border-radius: 6px;
+  user-select: none;
+}
+
+.tabuleiro.bloqueado {
+  pointer-events: none;
+}
+
+.celula {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 3px;
+  background: #d1d5db;
+  box-shadow: inset -2px -2px 0 #9ca3af, inset 2px 2px 0 #f9fafb;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.celula:hover {
+  background: #e5e7eb;
+}
+
+.celula.revelada {
+  background: #f3f4f6;
+  box-shadow: none;
+  cursor: default;
+}
+
+.celula.bandeira::after {
+  content: '\25B2';
+  color: #dc2626;
+}
+
+.celula.mina::after {
+  content: '\25CF';
+  color: #111827;
+}
+
+.celula.explodiu {
+  background: #ef4444;
+}
+
+.celula.bandeira-errada {
+  background: #fca5a5;
+}
+
+.n1 { color: #2563eb; }
+.n2 { color: #16a34a; }
+.n3 { color: #dc2626; }
+.n4 { color: #1e3a8a; }
+.n5 { color: #7f1d1d; }
+.n6 { color: #0e7490; }
+.n7 { color: #111827; }
+.n8 { color: #6b7280; }

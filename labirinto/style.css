@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #18181b;
+  color: #f4f4f5;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.painel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.painel select,
+.painel button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #3f3f46;
+  color: #f4f4f5;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.painel button:hover {
+  background: #52525b;
+}
+
+.mensagem {
+  min-height: 24px;
+  font-weight: 600;
+  color: #4ade80;
+}
+
+/* Quantidade de colunas e tamanho da célula vêm do JS:
+   labirinto.style.gridTemplateColumns = `repeat(${colunas}, 20px)` */
+.labirinto {
+  display: grid;
+  background: #27272a;
+}
+
+.celula {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  transition: background 0.1s;
+}
+
+.p-cima { border-top-color: #e4e4e7; }
+.p-direita { border-right-color: #e4e4e7; }
+.p-baixo { border-bottom-color: #e4e4e7; }
+.p-esquerda { border-left-color: #e4e4e7; }
+
+.celula.oculta {
+  background: #09090b;
+  border-color: #09090b;
+}
+
+.celula.atual {
+  background: #f97316;
+}
+
+.celula.explorada {
+  background: #1e3a8a;
+}
+
+.celula.caminho {
+  background: #eab308;
+}
+
+.celula.saida {
+  background: #16a34a;
+}
+
+.celula.jogador {
+  background: #ec4899;
+  border-radius: 50%;
+}
